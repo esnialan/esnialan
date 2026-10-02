@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Esteban Alonzo | Cornell MBA '28 | Supply Chain &amp; Operations Consulting</title>
+<meta name="description" content="Esteban Alonzo, first-year MBA at Cornell SC Johnson, recruiting for management consulting in supply chain and operations.">
+<style>
+:root{
+  --ink:#1f2b33; --muted:#56646b; --paper:#e9ebe6; --stone:#d9ddd6;
+  --deep:#27403f; --deep-2:#1d3130; --brass:#9c8756; --line:#bcc3bb;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Avenir Next","Segoe UI","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;
+  padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brass);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:var(--deep-2);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:52px;overflow-x:auto;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav .brand{font-family:var(--serif);color:#f1efe8;font-size:1.05rem;white-space:nowrap;text-decoration:none;margin-right:auto}
+nav a.l{color:#c9d3cf;text-decoration:none;font-size:.92rem;white-space:nowrap;padding:6px 2px;border-bottom:2px solid transparent}
+nav a.l:hover,nav a.l.on{color:#fff;border-bottom-color:var(--brass)}
+
+/* hero */
+.hero{background:var(--deep);color:#f1efe8}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:28px;padding-top:40px;padding-bottom:48px;align-items:center}
+.ph{width:min(260px,70%);aspect-ratio:2/3;position:relative;background:var(--deep-2);box-shadow:10px 10px 0 var(--deep-2)}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.ph.noimg{display:flex;align-items:center;justify-content:center;border:1.5px solid #5e6b5f}
+.ph.noimg::after{content:"EA";font-family:var(--serif);font-size:4.5rem;color:#b8c5c0;letter-spacing:.04em}
+.hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.5rem,9vw,4.4rem);line-height:1.02;margin:0 0 14px;letter-spacing:-.01em}
+.hero .title{font-size:1.15rem;margin:0 0 6px;color:#f1efe8}
+.hero .sub{margin:0 0 24px;color:#b8c5c0;font-size:1rem}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 20px;border:1.5px solid #f1efe8;text-decoration:none;font-weight:600;font-size:.95rem}
+.btn.fill{background:#f1efe8;color:var(--deep-2)}
+.btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+
+/* sections */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section:last-of-type{border-bottom:0}
+h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.7rem,5vw,2.3rem);margin:0 0 22px;letter-spacing:-.005em}
+.about p{font-family:var(--serif);font-size:1.2rem;line-height:1.7;max-width:62ch;margin:0 0 14px}
+
+/* experience timeline (a real sequence, so it gets a line) */
+.tl{list-style:none;margin:0;padding:0 0 0 22px;border-left:2px solid var(--deep)}
+.tl li{position:relative;padding:0 0 34px}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:-29px;top:9px;width:12px;height:12px;background:var(--paper);border:2px solid var(--deep);border-radius:50%}
+.role{font-weight:700;font-size:1.08rem;margin:0}
+.co{margin:0;color:var(--deep);font-weight:600}
+.meta{margin:2px 0 10px;color:var(--muted);font-size:.9rem}
+.tl ul{margin:0;padding-left:1.1em;max-width:68ch}
+.tl ul li{padding:0 0 8px;position:static}
+.tl ul li::before{display:none}
+
+/* education */
+.edu{display:grid;gap:16px}
+.edu article{background:var(--stone);padding:20px 22px;border-left:5px solid var(--deep)}
+.edu h3{margin:0;font-family:var(--serif);font-weight:500;font-size:1.25rem}
+.edu p{margin:4px 0 0}
+.edu .meta{margin:0 0 8px}
+
+/* skills */
+.tags{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.tags li{background:var(--deep);color:#eef0ea;padding:12px 14px;font-size:.95rem;text-align:center}
+.tags li:nth-child(4n+2){background:#3a5654}
+.tags li:nth-child(4n+3){background:var(--deep-2)}
+.tags li:nth-child(4n+4){background:#5e6b5f}
+
+/* contact */
+.contact{background:var(--stone)}
+.contact p{max-width:52ch;margin:0 0 20px}
+.contact .btn{border-color:var(--deep);color:var(--deep-2)}
+.contact .btn.fill{background:var(--deep);color:#f1efe8}
+.contact .btn:hover{background:var(--brass);border-color:var(--brass);color:#fff}
+footer{background:var(--deep-2);color:#98a8a3;text-align:center;font-size:.85rem;padding:20px 22px calc(20px + env(safe-area-inset-bottom,0px))}
+
+@media (min-width:760px){
+  body{font-size:18px}
+  .hero .wrap{grid-template-columns:300px 1fr;gap:56px;padding-top:64px;padding-bottom:72px}
+  .ph{width:100%}
+  section{padding:76px 0}
+  .edu{grid-template-columns:repeat(3,1fr)}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top">Esteban Alonzo</a>
+    <a class="l" href="#about">About</a>
+    <a class="l" href="#experience">Experience</a>
+    <a class="l" href="#education">Education</a>
+    <a class="l" href="#skills">Skills</a>
+    <a class="l" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="ph">
+      <img src="profile.jpg" alt="Portrait of Esteban Alonzo in a navy suit" width="900" height="1350"
+           onerror="this.parentNode.classList.add('noimg');this.remove()">
+    </div>
+    <div>
+      <h1>Esteban Alonzo</h1>
+      <p class="title">MBA Candidate, Class of 2028, Cornell SC Johnson College of Business</p>
+      <p class="sub">Recruiting for management consulting in supply chain and operations</p>
+      <div class="btns">
+        <a class="btn fill" href="#contact">Get in touch</a>
+        <a class="btn" href="#experience">See experience</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about" class="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p>I am a first-year MBA at Cornell Johnson with six years in supply chain, finance and key account management across Latin America.</p>
+    <p>At PACCAR Parts I managed more than $20M of truck parts inventory for dealer groups in four countries, pairing demand analytics with close relationships on the ground.</p>
+    <p>I want to bring that mix of analytical depth and client trust to consulting work in supply chain and operations. I work in English, Spanish and Portuguese.</p>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <ol class="tl">
+      <li>
+        <p class="role">Inventory Strategy &amp; Analytics Specialist</p>
+        <p class="co">PACCAR Parts, Ponta Grossa, Brazil</p>
+        <p class="meta">2023 – 2026</p>
+        <ul>
+          <li>Managed $20M+ of medium and heavy truck parts inventory, keeping availability above 94% for 5 key dealer groups across 4 countries.</li>
+          <li>Drove 40% growth in dealer purchases and cut obsolete and excess stock by 30%, with 20% higher inventory turnover across the network.</li>
+        </ul>
+      </li>
+      <li>
+        <p class="role">Finance Manager</p>
+        <p class="co">Perfice LATAM, Ponta Grossa, Brazil</p>
+        <p class="meta">2021 – 2023</p>
+        <ul>
+          <li>Recovered over R$1M in overdue receivables (15% of monthly revenue) through account reconciliation, aging reports and negotiated client deadlines.</li>
+          <li>Raised revenue 7% through unit-rate analysis and pricing adjustments, and saved 3% of administrative costs with an automated payroll sheet that removed 50 manual hours a month.</li>
+        </ul>
+      </li>
+      <li>
+        <p class="role">Key Account Manager</p>
+        <p class="co">KMM by Nstech, Ponta Grossa, Brazil</p>
+        <p class="meta">2020 – 2021</p>
+        <ul>
+          <li>Represented 5 key logistics clients (5,000+ trucks in operation) and turned their daily operational challenges into product development requests.</li>
+          <li>Achieved 100% of objectives and key results and ranked first among account managers for three consecutive feedback cycles.</li>
+        </ul>
+      </li>
+      <li>
+        <p class="role">Manufacturing Engineering Intern</p>
+        <p class="co">DAF Trucks, Ponta Grossa, Brazil</p>
+        <p class="meta">2018 – 2020</p>
+        <ul>
+          <li>Redesigned 100% of the bill of materials and process for the cabin and engine assembly lines.</li>
+          <li>Trained 50+ operators and standardized the manufacturing process through on-site observation and technical design analysis.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <h2>Education</h2>
+    <div class="edu">
+      <article>
+        <h3>Cornell SC Johnson College of Business</h3>
+        <p class="meta">Ithaca, NY · 2026 – 2028</p>
+        <p>MBA (STEM OPT). Strategy &amp; Consulting Immersion, Johnson Consulting Club, High Tech Club, Tennis Club.</p>
+      </article>
+      <article>
+        <h3>Brigham Young University – Idaho</h3>
+        <p class="meta">Rexburg, ID · 2017 – 2022</p>
+        <p>BS in Business Management, minor in Finance.</p>
+      </article>
+      <article>
+        <h3>University Center of Maringá</h3>
+        <p class="meta">Ponta Grossa, Brazil · 2016 – 2020</p>
+        <p>BEng in Industrial Engineering, on a ProUni full-tuition merit scholarship.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <ul class="tags">
+      <li>Inventory planning</li>
+      <li>Demand analysis</li>
+      <li>Supply chain analytics</li>
+      <li>Key account management</li>
+      <li>Pricing and margin analysis</li>
+      <li>Excel and VBA</li>
+      <li>SQL (Snowflake, Oracle)</li>
+      <li>Python</li>
+      <li>Power BI</li>
+      <li>Access</li>
+      <li>English (fluent)</li>
+      <li>Spanish (native)</li>
+      <li>Portuguese (native)</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>I am open to conversations with consulting recruiters and hiring managers. Email is the fastest way to reach me.</p>
+    <div class="btns">
+      <a class="btn fill" href="mailto:ea487@cornell.edu">ea487@cornell.edu</a>
+      <!-- LinkedIn: remove "hidden" and paste your profile URL into href when you have it -->
+      <a class="btn" id="linkedin" href="https://www.linkedin.com/in/" hidden rel="noopener" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Esteban Alonzo</footer>
+
+<script>
+(function(){
+  var links=[].slice.call(document.querySelectorAll('nav a.l'));
+  var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+  function mark(){
+    var y=window.scrollY+120,cur=-1;
+    secs.forEach(function(s,i){if(s&&s.offsetTop<=y)cur=i});
+    links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+  }
+  window.addEventListener('scroll',mark,{passive:true});mark();
+})();
+</script>
+</body>
+</html>
